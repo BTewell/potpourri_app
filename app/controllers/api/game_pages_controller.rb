@@ -5,4 +5,11 @@ class Api::GamePagesController < ApplicationController
     @fortune = fortunes.sample
     render 'my_fortune.json.jbuilder'
   end
+  def lottery_method
+    @winning_numbers =[]
+    6.times do
+      @winning_numbers << rand(60) + 1 
+    end
+    render 'my_lottery.json.jbuilder'
+  end  
 end
