@@ -1,1 +1,1 @@
-json.message @winning_numbers
+json.lottery @winning_numbers

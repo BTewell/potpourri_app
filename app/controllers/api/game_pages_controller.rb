@@ -12,4 +12,21 @@ class Api::GamePagesController < ApplicationController
     end
     render 'my_lottery.json.jbuilder'
   end  
+  def song_method
+    x = 99
+    song = []
+    100.times do
+      if x == 1
+        song << ["1 bottle of beer on the wall, 1 bottle of beer. Take one down, pass it around, no more bottles of beer on the wall."]
+        x -= 1
+      elsif x == 0
+        song << ["No more bottles of beer on the wall, no more bottles of beer. Go to the store, and buy some more, 99 bottles of beer on the wall."]
+      else
+        song << ["#{x} bottles of beer on the wall, #{x} bottles of beer. Take one down, pass it around, #{x-1} bottles of beer on the wall."]
+      x -=1
+      end
+    end
+    @song = song
+    render 'my_song.json.jbuilder'
+  end
 end

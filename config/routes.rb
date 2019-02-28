@@ -6,5 +6,6 @@ Rails.application.routes.draw do
   namespace :api do
     get '/fortune_url' => 'game_pages#fortune_method'
     get '/lotto_url' => 'game_pages#lottery_method'
+    get 'boozy_url' => 'game_pages#song_method'
   end
 end
