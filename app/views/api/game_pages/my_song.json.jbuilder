@@ -1,1 +1,1 @@
-json.message @song
+json.song @song
